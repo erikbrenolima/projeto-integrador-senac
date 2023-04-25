@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="{% static 'imagens/icon_manager.png' %" type="image/x-icon">
+	<title>Login</title>
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+
+  
+
+	
+	<!-- Custom styles for this template -->
+	<link href="signin.css" rel="stylesheet">
+</head>
+<body style="background-color: #248eff; max-width: 28em;" class="container">
+	<div style="margin-top: 8em;"></div>
+	<h1 class="display-6 text-center" style="color:white;">Esqueci minha senha</h1>
+<div class="mt-3 align-middle">
+	<form class="form-control pt-5 pb-5" action="login.html" method="post">
+		<div class="form-floating my-auto">
+			<input type="email" class="form-control" id="floatingInput" placeholder="email">
+			<label for="email">E-mail</label>
+			<p class="fs-6 mt-3 ms-2 mb-5">Digite o email para a redefinição da senha</p>
+		</div>
+		<div class="d-grid col-5 mx-auto">
+			<input type="submit" value="Recuperar" class="btn btn-primary btn-lg" required>
+		</div>
+		  
+	</form>
+</div>
+</body>
+</html>
