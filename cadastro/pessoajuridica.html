@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    </head>
+<body style="background-color: #248eff;">
+  <nav class="fixed-top navbar" style="background-color: white;">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="buttosn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu principal</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="../inicio/inicio.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../banco_de_clientes/tabelaCliente.html">Clientes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../funcionarios/tabelaFuncionario.html">Funcionários</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../cadastro/cadastro.html">Cadastrar pessoa física</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="../cadastro/pessoajuridica.html">Cadastrar pessoa jurídica</a>
+            </li>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<div class="continer container-sm" style="width:80%; margin-top: 15%; margin-bottom:5%;">
+  <style>.obgt{color:red}</style>
+    <form class="form-control d-grid gap-3" method="´post" action="/clientes/">
+
+      <div class="mt-4">
+        <p>Campos marcados com <span class="obgt">*</span> são obrigatórios</p>
+      </div>
+
+        <div>
+            <label class="form-label" for="nome">Razão social <span class="obgt">*</span></label>
+            <input type="text" class="form-control" required name="razao_social">
+        </div>
+        <div>
+          <label for="nomeFantasia" class="form-label">Nome Fantasia <span class="obgt">*</span></label>
+          <input type="text" class="form-control" required name="nome_fantasia">
+        </div>
+        
+         <div class="input-group">
+            <label for="cnpj" class="input-group-text">CNPJ<span class="obgt">*</span></label>
+            <input type="text" class="form-control" required name="cnpj" placeholder="12.345.678/0001-00" aria-label="Username" maxlength="10">
+         </div>
+
+        <div>
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="text" class="form-control" name="telefone" placeholder="71 91234-5678" maxlength="11">
+        </div>
+
+        <div>
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" name="email" placeholder="">
+        </div>
+
+        <div>
+          <label for="endereco" class="form-label">Endereço</label>
+          <input type="text" class="form-control" name="endereco" placeholder="">
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-text">CEP</span>
+            <input type="text" name="cep" class="form-control mw-25" placeholder="12345-678" aria-label="Server" maxlength="8" >
+              <label for="estados" class="input-group-text">Estado</label>
+              <select id="UF" name="estados" class="form-select">
+                  <option value="" disabled selected>Selecione</option>
+                  <option value="AC">Acre</option>
+                  <option value="AL">Alagoas</option>
+                  <option value="AP">Amapá</option>
+                  <option value="AM">Amazonas</option>
+                  <option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option>
+                  <option value="DF">Distrito Federal</option>
+                  <option value="ES">Espirito Santo</option>
+                  <option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option>
+                  <option value="MS">Mato Grosso do Sul</option>
+                  <option value="MT">Mato Grosso</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PA">Pará</option>
+                  <option value="PB">Paraíba</option>
+                  <option value="PR">Paraná</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PI">Piauí</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option>
+                  <option value="SC">Santa Catarina</option>
+                  <option value="SP">São Paulo</option>
+                  <option value="SE">Sergipe</option>
+                  <option value="TO">Tocantins</option>
+              </select>
+          </div>
+         
+        <div>
+            <label for="cidade" class="form-label">Cidade</label>
+            <input type="text" name="cidade" class="form-control">
+        </div>
+
+        <div class="form-floating mb-4" id="obs">
+            <textarea class="form-control" name="obs" placeholder="Observações" id="obs" style="resize: none; height:5em;"></textarea>
+            <label for="obs">Observações</label>
+        </div>
+        <div class="text-center mb-3">
+          <input type="submit" value="Cadastrar" class="btn btn-primary btn-lg">
+        </div>
+    </form>
+  </div>
+  
+
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
